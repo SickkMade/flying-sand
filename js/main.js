@@ -18,12 +18,17 @@ document.addEventListener('mousemove', event => {
 })
 
 function fall(){
+    console.log(window.innerWidth)
     balls.forEach(ball => {
         if(parseInt(ball.style.top) < window.innerHeight-25){
             ball.style.top = Math.random()*5 + parseInt(ball.style.top) + 'px';
+            ball.style.left = Math.random()*5 + parseInt(ball.style.left) + 'px';
         }
         else{
             ball.style.top = 0
+        }
+        if(parseInt(ball.style.left) > window.innerWidth) {
+            ball.style.left = 0
         }
     })
 }
