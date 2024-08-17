@@ -53,4 +53,4 @@ function fall(){
 }
 
 
-setInterval(() => requestAnimationFrame(fall), 5)
+setInterval(() => requestAnimationFrame(fall), 1)
